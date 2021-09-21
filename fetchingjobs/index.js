@@ -4,7 +4,7 @@ function createDbFetchingJobsLib (execlib) {
 
   require('./basecreator')(execlib, mylib);
   require('./fetchercreator')(execlib, mylib);
-  require('./fetcherbyhashusernamecreator')(execlib, mylib);
+  require('./fetcherbycredentialscreator')(execlib, mylib);
   require('./startingwithfetchercreator')(execlib, mylib);
   require('./existsfetchercreator')(execlib, mylib);
 

@@ -24,7 +24,7 @@ function createPlainManipulator (lib, mylib) {
     return this.updateOnDbByUsername(this.userNameValueOf(usernamehash), datahash, options);
   };
   PlainManipulator.prototype.fullFetchForOuter = function (credentials) {
-    return this.fetchByHashUserName(credentials)
+    return this.fetchByCredentials(credentials)
       .then(this.hashOfDBHash.bind(this));
   };
 

@@ -32,8 +32,8 @@ function createDbResolverManipulatorBase (lib, mylib) {
   };
 
 //fetching methods
-  DbResolverManipulatorBase.prototype.fetchByHashUserName = function (credentials) {
-    return (new mylib.fetchingjobs.FetcherByHashUserName(
+  DbResolverManipulatorBase.prototype.fetchByCredentials = function (credentials) {
+    return (new mylib.fetchingjobs.FetcherByCredentials(
       this.namecolumn,
       this.passwordcolumn,
       credentials,

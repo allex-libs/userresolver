@@ -8,7 +8,7 @@ function createCrypter (lib, mylib) {
   lib.inherit(Crypter, mylib.Base);
   Crypter.prototype.check = function (credentials) {
     var _crdn = credentials;
-    var ret = this.fetchByHashUserName(credentials)
+    var ret = this.fetchByCredentials(credentials)
     .then(
       this.match.bind(this, _crdn)
     );
@@ -19,9 +19,9 @@ function createCrypter (lib, mylib) {
     if (!credentials) return false;
     if (!dbuserhash) return false;
     return 
-      this.userNameValueOf(credentials)===this.userNameValueOf(dbuserhash)
+      credentials.username===this.userNameValueOf(dbuserhash)
       &&
-      this.passwordValueOf(credentials)===this.passwordValueOf(dbuserhash)
+      credentials.password===this.passwordValueOf(dbuserhash)
       ;
   };
   Crypter.prototype.encrypt = function (datahash) {

@@ -15,7 +15,7 @@ function createCrypter (lib, mylib) {
     _crdn = null;
     return ret;
   };
-  Crypter.prototype.match = function (credentials, dbhash) {
+  Crypter.prototype.match = function (credentials, dbuserhash) {
     if (!credentials) return false;
     if (!dbuserhash) return false;
     return 

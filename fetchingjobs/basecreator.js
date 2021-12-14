@@ -26,9 +26,6 @@ function createBaseDbFetchingJob (execlib, mylib) {
   };
   DbFetchingJobBase.prototype.goWithSink = function () {
   };
-  DbFetchingJobBase.prototype.userNameValueOf = function (obj) {
-    return obj ? obj[this.usernamecolumnname] : void 0;
-  };
 
   mylib.DbFetchingJobBase = DbFetchingJobBase;
 }

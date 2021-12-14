@@ -1,6 +1,6 @@
 {
   "name": "allex_userresolverlib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AllexJS lib in support to allex_userresolverservice",
   "main": "index.js",
   "scripts": {
